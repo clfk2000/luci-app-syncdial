@@ -16,7 +16,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=3. Applications
 	PKGARCH:=all
 	TITLE:=luci for syncdial
-        DEPENDS:=+kmod-macvlan +shellsync
+        DEPENDS:=+kmod-macvlan
 endef
 
 define Package/$(PKG_NAME)/description
