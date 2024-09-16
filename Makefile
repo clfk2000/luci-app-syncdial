@@ -63,7 +63,10 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/bin
 	$(INSTALL_BIN) ./files/bin/genwancfg $(1)/bin/genwancfg
 	$(INSTALL_BIN) ./files/bin/pppconnectcheck $(1)/bin/pppconnectcheck
-	
+
+	$(INSTALL_DIR) $(1)/usr/share/rpcd/acl.d
+	$(INSTALL_BIN) ./files/usr/share/rpcd/acl.d/luci-app-syncdial.json $(1)/usr/share/rpcd/acl.d/
+
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DATA) ./files/usr/lib/lua/luci/controller/*.lua $(1)/usr/lib/lua/luci/controller/
 
